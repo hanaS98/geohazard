@@ -1,0 +1,109 @@
+
+.HeaderTitle h1{
+    position: relative;
+}
+.HeaderTitle h1::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 5px;
+    background-color: #a98735;
+    right: -15px;
+}
+.overlay.overlay-op-9:hover:before, .overlay.overlay-op-9.overlay-show:before, .overlay.overlay-op-9.show:before{
+    opacity: 0.7;
+}
+body,h1,h5{
+    font-family: 'Tajawal', sans-serif;
+}
+a:hover i{
+    color: none;
+}
+.fa-youtube:hover{
+    color: #CD201F;
+}
+.fa-linkedin-in:hover{
+    color: #0077b5 ;
+}
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+.boxes-text{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.rawasi-btn{
+    background-color: #091f5a;
+    color: white;
+    font-size: 16px;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+.rawasi-btn:hover{
+    background-color: #071640;
+    color: white;
+    text-decoration: none;
+}
+.small-img{
+    display: none;
+}
+.main-img{
+    display: block;
+}
+@media(max-width:520px){
+    .small-img{
+        display: block;
+    }
+    .main-img{
+        display: none;
+    }
+}
+.location-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5px;
+    padding: 7px;
+    border: none;
+    border-radius: 7px;
+    background-color: #091f5a;
+    color: white;
+    cursor: pointer;
+}
+#map {
+    width: 100%;
+    height: 480px;
+}
+.project-title,.photo-information{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background: #000000ab;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+}
+.owl-carousel .img-thumbnail.img-thumbnail-hover-icon:hover .project-title{
+    display: none;
+}
+.photo-information{
+    left:0;
+}
+.photo-information .title{
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.photo-information .text{
+    font-size: 12px;
+    color: #ccc;
+    display: none;
+}
+.img-thumbnail.img-thumbnail-hover-icon:hover .photo-information .text{
+    display: block;
+}
