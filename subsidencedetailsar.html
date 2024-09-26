@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.rtl.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
@@ -46,17 +46,17 @@
 		<link id="skinCSS" rel="stylesheet" href="css/skins/skin-law-firm-2.css">
 
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/customar.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -64,8 +64,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -81,7 +82,7 @@
 													</li>
 							
 													<li class="dropdown">
-														<a href="hazardar.html" class="dropdown-item dropdown-toggle active">المخاطر</a>
+														<a href="hazardar.html#Hazard" class="dropdown-item dropdown-toggle">المخاطر الجيولوجية</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetailsar.html" class="nav-link">الزلازل</a>
@@ -104,32 +105,55 @@
 															<li>
 																<a href="sandDunsDetailsar.html" class="nav-link">الزحف الرملي والكثبان</a>
 															</li>
+															<li>
+																<a href="valleyar.html" class="nav-link">الأودية</a>
+															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">التوعية</a>
+														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">المركز الإعلامي</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li>
+																<a href="volcanoesawarenessar.html" class="nav-link">التوعية والتثقيف</a>
+															</li>
+															<li>
+																<a href="galleryar.html" class="nav-link">معرض الصور</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
+															</li>
+															
+															
+														</ul>
+														
 													</li>
-													<li>
-														<a href="galleryar.html" class="nav-link">معرض الصور</a>
-													</li>
-													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
-													</li>
+													
 													<li>
 														<a href="formar.html" class="nav-link">الابلاغ عن خطر جيولوجي</a>
 													</li>
+													<li>
+														<a href="subsidencedetails.html" class="nav-link">EN</a>
+													</li>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="ادوات سهولة الوصول">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">الوضع المظلم</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">الوضع الرمادي</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">إزالة إعدادات سهولة الوصول</a></li>
+														</ul>
+														
+													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="subsidencedetails.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">EN</button>
-										</a>
-										
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -189,10 +213,10 @@
 											<br>
 											<h4>الأهداف من دراستها :</h4>
 											<ul>
-												<li>التوعية والحماية من الآثار السلبية الناتجة عن مخاطر الإنخسافات والتشققات الأرضية</li>
-												<li>تحديد الأماكن الخطرة والمعرضة لخطر هذا النوع من المخاطر الجيولوجية</li>
-												<li>عمل قاعدة بيانات خاصة بأماكن تواجد مخاطر الإنخسافات والتشققات الأرضية بالمملكة العربية السعودية</li>
-												<li>توعية المجتمع بترشيد استهلاك المياه الجوفية، مستخدمين في ذلك أنظمة استرشاد الري الحديثة، تفادياً للآثار السلبية الناتجة من تكون التشققات الأرضية.</li>
+												<li><p style="padding: 0; margin: 0;">التوعية والحماية من الآثار السلبية الناتجة عن مخاطر الإنخسافات والتشققات الأرضية</p></li>
+												<li><p style="padding: 0; margin: 0;">تحديد الأماكن الخطرة والمعرضة لخطر هذا النوع من المخاطر الجيولوجية</p></li>
+												<li><p style="padding: 0; margin: 0;">عمل قاعدة بيانات خاصة بأماكن تواجد مخاطر الإنخسافات والتشققات الأرضية بالمملكة العربية السعودية</p></li>
+												<li><p style="padding: 0; margin: 0;">توعية المجتمع بترشيد استهلاك المياه الجوفية، مستخدمين في ذلك أنظمة استرشاد الري الحديثة، تفادياً للآثار السلبية الناتجة من تكون التشققات الأرضية.</p></li>
 												
 											</ul>
 							
@@ -233,15 +257,11 @@
 								
 							</div>
 							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
+								<ul class="social-icons social-icons-big social-icons-dark-2">
+									<li class="social-icons-youtube"><a href="https://www.youtube.com/SgsOrgSa" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-icons-twitter"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
 							</div>
 							<div class="col-4" style="text-align: left;">
 								<i class="fa-solid fa-phone-flip" style="font-size: 20px;padding: 0 5px"></i>

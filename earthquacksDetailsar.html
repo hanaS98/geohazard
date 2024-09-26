@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.rtl.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
@@ -46,17 +46,17 @@
 		<link id="skinCSS" rel="stylesheet" href="css/skins/skin-law-firm-2.css">
 
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/customar.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -64,8 +64,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -81,7 +82,7 @@
 													</li>
 							
 													<li class="dropdown">
-														<a href="hazardar.html" class="dropdown-item dropdown-toggle active">المخاطر</a>
+														<a href="hazardar.html#Hazard" class="dropdown-item dropdown-toggle">المخاطر الجيولوجية</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetailsar.html" class="nav-link">الزلازل</a>
@@ -104,32 +105,55 @@
 															<li>
 																<a href="sandDunsDetailsar.html" class="nav-link">الزحف الرملي والكثبان</a>
 															</li>
+															<li>
+																<a href="valleyar.html" class="nav-link">الأودية</a>
+															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">التوعية</a>
+														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">المركز الإعلامي</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li>
+																<a href="volcanoesawarenessar.html" class="nav-link">التوعية والتثقيف</a>
+															</li>
+															<li>
+																<a href="galleryar.html" class="nav-link">معرض الصور</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
+															</li>
+															
+															
+														</ul>
+														
 													</li>
-													<li>
-														<a href="galleryar.html" class="nav-link">معرض الصور</a>
-													</li>
-													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
-													</li>
+													
 													<li>
 														<a href="formar.html" class="nav-link">الابلاغ عن خطر جيولوجي</a>
 													</li>
+													<li>
+														<a href="earthquacksDetails.html" class="nav-link">EN</a>
+													</li>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="ادوات سهولة الوصول">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">الوضع المظلم</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">الوضع الرمادي</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">إزالة إعدادات سهولة الوصول</a></li>
+														</ul>
+														
+													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="earthquacksDetails.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">EN</button>
-										</a>
-										
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -155,7 +179,7 @@
 				</section>
 
 				<div class="spacer py-3 my-4"></div>
-				<div class="container">
+				<div class="container article">
 					
 
 						<div class="row">
@@ -212,12 +236,12 @@
 							</p>
 							<h4>آثار الزلازل:</h4>
 							<ol>
-								<li>هبوط أو ارتفاع بعض المناطق من سطح الأرض كظهور أو غمر بعض الجزر والسواحل.</li>
-								<li>الانهيارات والانزلاقات الأرضية خاصة عند سفوح المرتفعات وفي المناطق التي توجد بها كهوف وفجوات تحت سطح الأرض مما يؤدي إلى تدمير المباني والطرق وغيرها.</li>
-								<li>التشققات الأرضية وما ينجم عنها من أضرار جراء حدوث الهزات الأرضية مما يؤثر على المباني في تلك المناطق، مما يتطلب استخدام نظام بناء مقاوم للزلازل.</li>
-								<li> تميع التربة يؤدي إلى انهيار المنشآت المقامة عليها.</li>
-								<li>موجات المد البحري العالي (تسونامي)، تؤدي إلى غمر مناطق واسعة متاخمة للسواحل بالمياه.</li>
-								<li>  الحرائق بسبب تلف شبكات الكهرباء والغاز وغيرها.</li>
+								<li><p style="padding: 0; margin: 0;">هبوط أو ارتفاع بعض المناطق من سطح الأرض كظهور أو غمر بعض الجزر والسواحل.</p></li>
+								<li><p style="padding: 0; margin: 0;">الانهيارات والانزلاقات الأرضية خاصة عند سفوح المرتفعات وفي المناطق التي توجد بها كهوف وفجوات تحت سطح الأرض مما يؤدي إلى تدمير المباني والطرق وغيرها.</p></li>
+								<li><p style="padding: 0; margin: 0;">التشققات الأرضية وما ينجم عنها من أضرار جراء حدوث الهزات الأرضية مما يؤثر على المباني في تلك المناطق، مما يتطلب استخدام نظام بناء مقاوم للزلازل.</p></li>
+								<li><p style="padding: 0; margin: 0;">تميع التربة يؤدي إلى انهيار المنشآت المقامة عليها.</p> </li>
+								<li><p style="padding: 0; margin: 0;">موجات المد البحري العالي (تسونامي)، تؤدي إلى غمر مناطق واسعة متاخمة للسواحل بالمياه.</p></li>
+								<li><p style="padding: 0; margin: 0;">الحرائق بسبب تلف شبكات الكهرباء والغاز وغيرها.</p>  </li>
 							</ol>
 										</div>
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple2" role="tabpanel">
@@ -237,32 +261,32 @@
 
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200" style="animation-delay: 200ms;">					
 												<img src="pic/recovery/7.jpg" width="" title="figure(1)">
-												<p style="font-weight: bold; color: black;"> شكل رقم (1) : خريطة موضح عليها الزلازل التي تم تحليلها تلقائيا ببرنامج الهيدرا .</p>
+												<p class="img-desc" > شكل رقم (1) : خريطة موضح عليها الزلازل التي تم تحليلها تلقائيا ببرنامج الهيدرا .</p>
 											</div>
 											<br>
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" style="animation-delay: 400ms;">
 												<img src="pic/recovery/8.jpg" width="" title="figure(2)">
-												<p style="font-weight: bold; color: black;">شكل رقم (2) : نافذة مراقبة الأحداث الزلزالية أعلاه، تظهر البيانات الزلزالية</p>
+												<p class="img-desc" >شكل رقم (2) : نافذة مراقبة الأحداث الزلزالية أعلاه، تظهر البيانات الزلزالية</p>
 											</div>
 											<br>
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" style="animation-delay: 600ms;">
 												<img src="pic/recovery/9.jpg" width="" title="figure(3)">
-												<p style="font-weight: bold; color: black;">شكل رقم (3): توضح الموجات التي تم معالجتها آليا ، كما يمكن إعادة تحليلها إذا لزم الأمر..</p>
+												<p class="img-desc" >شكل رقم (3): توضح الموجات التي تم معالجتها آليا ، كما يمكن إعادة تحليلها إذا لزم الأمر..</p>
 											</div>
 											<br>
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" style="animation-delay: 800ms;">
 												<img src="pic/recovery/10.jpg" width="" title="figure(4)">
-												<p style="font-weight: bold; color: black;">شكل رقم (4): توضح هذه النافذة المحطات الزلزالية المستخدمة في تحديد معاملات الزلزال. وتظهر أيضاً توزيعات الاتجاه والمسافة لأجهزة قياس لمحطات الرصد الزلزالي حول بؤرة الزلزال، ومدى تغطية شبكات الرصد الزلزالي للموقع. يوضح الجدول نسبة الأخطاء في أوقات وصول الموجات نسبةً إلى أوقات الوصول المتوقعة المسجلة في محطات الرصد الزلزالي، التي تبين الأخطاء في الأوقات المسجلة خلال عملية الرصد. ويحدث هذا الخطأ أحيانا بسبب الوصول الضعيف للموجات الزلزالية ذات سعة المنخفضة  للموجات الأولية، خصوصاً أن هناك ضجيجاً ظاهراً في التسجيل. ثم تتم إعادة احتساب المتغيرات الزلزالية إلى أن يتم الحصول على تسجيل مقبول للبيانات. </p>
+												<p class="img-desc" >شكل رقم (4): توضح هذه النافذة المحطات الزلزالية المستخدمة في تحديد معاملات الزلزال. وتظهر أيضاً توزيعات الاتجاه والمسافة لأجهزة قياس لمحطات الرصد الزلزالي حول بؤرة الزلزال، ومدى تغطية شبكات الرصد الزلزالي للموقع. يوضح الجدول نسبة الأخطاء في أوقات وصول الموجات نسبةً إلى أوقات الوصول المتوقعة المسجلة في محطات الرصد الزلزالي، التي تبين الأخطاء في الأوقات المسجلة خلال عملية الرصد. ويحدث هذا الخطأ أحيانا بسبب الوصول الضعيف للموجات الزلزالية ذات سعة المنخفضة  للموجات الأولية، خصوصاً أن هناك ضجيجاً ظاهراً في التسجيل. ثم تتم إعادة احتساب المتغيرات الزلزالية إلى أن يتم الحصول على تسجيل مقبول للبيانات. </p>
 											</div>
 											<br>
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" style="animation-delay: 800ms;">
 												<img src="pic/recovery/11.jpg" width="" title="figure(5)">
-												<p style="font-weight: bold;color: black;">شكل رقم (5):يبين الشكل مكان ووقت الحدث في نافذة جديدة، مع كافة المتغيرات الأخرى.</p>
+												<p class="img-desc" >شكل رقم (5):يبين الشكل مكان ووقت الحدث في نافذة جديدة، مع كافة المتغيرات الأخرى.</p>
 											</div>
 											<br>
 											<div class="appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="800" style="animation-delay: 800ms;">
 												<img src="pic/recovery/12.jpg" width="" title="figure(6)">
-												<p style="font-weight: bold;color: black;">شكل رقم (6):يوضح رسم نموذج السرعات الزلزالية  للهزة المسجلة من خلال تحديد أوقات وصول كافة الموجات المختلفة من محطات الرصد المختلفة على المنحنيات التي تمثل وقت انتقال الموجة من أجل فحص الموجات التي لوحظت بشكل فعلي، ومدى مناسبتها جيداً للنماذج القياسية لسرعات الموجات داخل طبقات القشرة الأرضية. </p>
+												<p class="img-desc" >شكل رقم (6):يوضح رسم نموذج السرعات الزلزالية  للهزة المسجلة من خلال تحديد أوقات وصول كافة الموجات المختلفة من محطات الرصد المختلفة على المنحنيات التي تمثل وقت انتقال الموجة من أجل فحص الموجات التي لوحظت بشكل فعلي، ومدى مناسبتها جيداً للنماذج القياسية لسرعات الموجات داخل طبقات القشرة الأرضية. </p>
 											</div>
 										</div>
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple4" role="tabpanel">
@@ -304,38 +328,69 @@
 			</div> 
 
 			<footer id="footer" class="border-0 mt-0">
-				
-				<div class="footer-copyright py-2">
-					<div class="container py-2">
-						<div class="row" style="align-items: center;">
-							
-							<div class="col-4">
-								<a href="https://www.vision2030.gov.sa/ar/" target="_blank">
-									<img src="pic/2030.png" style="width: 100%;max-width: 90px;">
-								</a>
-								
-							</div>
-							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
-							</div>
-							<div class="col-4" style="text-align: left;">
-								<i class="fa-solid fa-phone-flip" style="font-size: 20px;padding: 0 5px"></i>
-								<span>920010861</span>
-								
-								
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+               
+                <div class="footer-copyright py-2">
+                    <div class="container pt-5 pb-2">
+                        <div class="row align-items-start">
+                           
+                            <div class="col-lg-4">
+                                <a href="https://sgs.gov.sa/" target="_blank">
+                                    <img src="pic/TEST.png" style="width: 100%;">
+                                </a>
+                               
+                            </div>
+                            <div class="col-lg-4">
+                                <h4>اتصل بنا</h3>
+                                <hr style="background: rgb(255 255 255 / 51%);margin:0;">
+                                <div class="mt-3">
+                                    <div class="mb-2">
+                                        <i class="fa-solid fa-phone-flip" style="font-size: 17px;padding: 0 5px; color: #f2f2f2;"></i>
+                                        <a href="#">920010861</a>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="fa-brands fa-whatsapp" style="font-size: 20px;padding: 0 5px; color: #f2f2f2;"></i>
+                                        <a href="https://wa.me/0126198817" target="_blank">0126198817</a>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="fa-regular fa-envelope" style="font-size: 20px;padding: 0 5px; color: #f2f2f2;"></i>
+                                        <a href="mailto: info@sgs.gov.sa" target="_blank">info@sgs.gov.sa</a>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <h4>روابط هامة</h4>
+                                <hr style="background: rgb(255 255 255 / 51%);margin:0;">
+                                <div class="row mt-3">
+                                    <div class="col-lg-4">
+                                        <a href="https://www.vision2030.gov.sa/ar/" target="_blank">
+                                            <img src="pic/2030.png" style="width: 100%;max-width: 90px;">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="https://www.my.gov.sa/wps/portal/snp/main" target="_blank">
+                                            <img src="pic/sudia-img-final.png" style="width: 100%;max-width: 90px;">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <a href="https://mim.gov.sa/mim/" target="_blank">
+                                            <img src="pic/mim-logo.svg" style="width: 100%;max-width: 90px;">
+                                        </a>
+                                    </div>
+                                </div>
+ 
+                               
+                            </div>
+                        </div>
+ 
+                        <div class="pt-3" style="text-align: center;">
+                            <hr style="background: rgb(255 255 255 / 51%);margin:10px 0;">
+                            <p>&copy;2024 هيئة المساحة الجيولوجية السعودية</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </footer>
 
 		</div>
 

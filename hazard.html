@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 	<head>
 
 		<!-- Basic -->
@@ -50,11 +50,11 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -62,8 +62,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -75,11 +76,11 @@
 											<nav class="collapse">
 												<ul class="nav nav-pills" id="mainNav">
 													<li>
-														<a href="#home" class="nav-link active">Home</a>
+														<a href="hazard.html" class="nav-link">Home</a>
 													</li>
 							
 													<li class="dropdown">
-														<a href="#Hazard" class="dropdown-item dropdown-toggle">Hazards</a>
+														<a href="hazard.html#Hazard" class="dropdown-item dropdown-toggle">Geohazards</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetails.html" class="nav-link">Earthquakes</a>
@@ -91,66 +92,66 @@
 																<a href="subsidencedetails.html" class="nav-link">Subsidences & ground cracks</a>
 															</li>
 															<li>
-																<a href="volcanoesDetails.html" class="nav-link">Volcanoes</a>
+																<a href="volcanoesDetails.html" class="nav-link">Volcanos</a>
 															</li>
 															<li>
-																<a href="sabakkahDetails.html" class="nav-link">Sabaka</a>
+																<a href="sabakkahDetails.html" class="nav-link">Sabkhahs</a>
 															</li>
 															<li>
 																<a href="floodsDetails.html" class="nav-link">Floods</a>
 															</li>
 															<li>
-																<a href="sandDunsDetails.html" class="nav-link">SandDunes</a>
+																<a href="sandDunsDetails.html" class="nav-link">Sand Duns</a>
+															</li>
+															<li>
+																<a href="valley.html" class="nav-link">Valleys</a>
 															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle">Awareness</a>
-														<!-- <ul class="dropdown-menu border-radius-0">
+														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle">Media Center</a>
+														<ul class="dropdown-menu border-radius-0">
 															<li>
-																<a href="volcanoesawareness.html" class="nav-link">Earthquakes & Volcanoes</a>
+																<a href="volcanoesawareness.html" class="nav-link">Awareness</a>
 															</li>
 															<li>
-																<a href="#" class="nav-link">Geohazards</a>
+																<a href="gallery.html" class="nav-link">Gallary</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
 															</li>
 															
-														</ul> -->
+															
+														</ul>
+														
+													</li>
+													
+													<li>
+														<a href="form.html" class="nav-link">Report Geohazard</a>
 													</li>
 													<li>
-														<a href="gallery.html" class="nav-link">Gallery</a>
+														<a href="hazardar.html" class="nav-link" style="font-family: 'Tajawal', sans-serif;">ع</a>
 													</li>
-													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="accessibility settings">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">Dark mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">Gray mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">Remove accessibility settings </a></li>
+														</ul>
+														
 													</li>
-													<li>
-														<a href="form.html" class="nav-link">Report a Geoazard</a>
-													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="hazardar.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">ع</button>
-										</a>
-										<!-- <div class="header-nav-feature header-nav-features-search d-inline-flex">
-											<a href="#" class="header-nav-features-toggle text-decoration-none" data-focus="headerSearch">
-												<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-4 top-2 text-color-hover-primary"></i>
-											</a>
-											<div class="header-nav-features-dropdown header-nav-features-dropdown-mobile-fixed" id="headerTopSearchDropdown">
-												<form role="search" action="page-search-results.html" method="get">
-													<div class="simple-search input-group">
-														<input class="form-control text-1" id="headerSearch" name="q" type="search" value="" placeholder="Search...">
-														<button class="btn" type="submit">
-															<i class="icons icon-magnifier header-nav-top-icon font-weight-bold text-color-dark text-4 text-color-hover-primary top-2"></i>
-														</button>
-													</div>
-												</form>
-											</div>
-										</div> -->
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -160,52 +161,83 @@
 			</header>
 
 			<div role="main" class="main">
-				<div class="container">
-					<div style="position: absolute;color: white;z-index: 1000;width: 95%;max-width: 600px;height: 80%;display: flex;flex-direction: column;justify-content: center;padding-left: 30px; overflow-y: auto;">
-						<div class="HeaderTitle">
-							<h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14 positive-ls-3 mb-3 appear-animation animated blurIn appear-animation-visible">GEO-HAZARD</h1>
-						</div>
-						<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُونَ﴿</h4>
-						<p class="text-color-light  text-3-5 mb-4" style="margin-top: 10px;">Based on the Saudi Geological Survey's commitment to providing specialized technical services to serve the community, the Authority is represented by the GeoHazard Center, which studies and monitors these risks, whether natural or related to human activities due to misuse of natural resources, to know their causes and the extent of their impact through field and laboratory studies and evaluation. Damage to human life and property and developing the necessary recommendations to reduce its aggravation.</p>
-						
-						<!-- <a href="https://apps.sgs.gov.sa/AppEngine/?appId=1e6e0e78-56b6-4e33-b2c7-ee50afe5efb8&tenant=ngd" target="_blank" class="btn btn-primary font-weight-bold text-3-5 px-5 py-3 mt-3 appear-animation animated blurIn appear-animation-visible" style="width: 200px;">RAWASI</a> -->
-					</div>
-					
-				</div>
-				<div class="owl-carousel-wrapper" style="height: 845px;" id="home">
-					<div class="owl-carousel dots-inside dots-horizontal-center show-dots-hover show-dots-xs show-dots-sm show-dots-md nav-style-1 nav-inside nav-inside-plus nav-light nav-lg nav-font-size-lg show-nav-hover mb-0" data-plugin-options="{'responsive': {'0': {'items': 1, 'dots': true, 'nav': false}, '479': {'items': 1, 'dots': true}, '768': {'items': 1, 'dots': true}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'autoHeight': false, 'margin': 0, 'dots': false, 'dotsVerticalOffset': '-235px', 'nav': true, 'navVerticalOffset': '70px', 'animateIn': 'fadeIn', 'animateOut': 'fadeOut', 'mouseDrag': false, 'touchDrag': false, 'pullDrag': false, 'autoplay': true, 'autoplayTimeout': 7000, 'autoplayHoverPause': true, 'rewind': true}">
-						
+				
+				<div class="owl-carousel-wrapper" style="">
+					<div class="owl-carousel dots-inside dots-horizontal-center show-dots-hover show-dots-xs show-dots-sm show-dots-md nav-style-1 nav-inside nav-inside-plus nav-light nav-lg nav-font-size-lg show-nav-hover mb-0 owl-theme owl-loaded owl-carousel-init" data-plugin-options="{'responsive': {'0': {'items': 1, 'dots': true, 'nav': false}, '479': {'items': 1, 'dots': true}, '768': {'items': 1, 'dots': true}, '979': {'items': 1}, '1199': {'items': 1}}, 'loop': false, 'autoHeight': false, 'margin': 0, 'dots': false, 'dotsVerticalOffset': '-235px', 'nav': true, 'navVerticalOffset': '70px', 'animateIn': 'fadeIn', 'animateOut': 'fadeOut', 'mouseDrag': false, 'touchDrag': false, 'pullDrag': false, 'autoplay': true, 'autoplayTimeout': 7000, 'autoplayHoverPause': true, 'rewind': true}" style="height: auto;">
+
 						<!-- Carousel Slide 1 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/8.png); background-size: cover; background-position: center;"></div>
-						</div>
+						
 
 						<!-- Carousel Slide 2 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/DSC00952.png); background-size: cover; background-position: center;"></div>
-						</div>
+						
 
-						<!-- Carousel Slide 3 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/DSC00966.png); background-size: cover; background-position: center;"></div>
-						</div>
-
-						<!-- Carousel Slide 4 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/FIL1268.png); background-size: cover; background-position: center;"></div>
-						</div>
-
-						<!-- Carousel Slide 5 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/IMG_3558.png); background-size: cover; background-position: center;"></div>
-						</div>
-
-						<!-- Carousel Slide 6 -->
-						<div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 845px;">
-							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show style="background-image: url(pic/IMG_3407.JPG); background-size: cover; background-position: center;"></div>
-						</div>
-
-					</div>
+					<div class="owl-stage-outer">
+						<div class="owl-stage" style="transform: translate3d(-3459px, 0px, 0px); transition: all; width: 6920px;"><div class="owl-item" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation kenBurnsToLeft appear-animation-visible d-none" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/8.png); background-size: cover; background-position: center center; animation-duration: 30s; animation-delay: 100ms;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div><div class="owl-item active" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation animated appear-animation-visible" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/DSC00952.png); background-size: cover; background-position: center;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div>
+						<div class="owl-item" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation animated appear-animation-visible" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/DSC00966.png); background-size: cover; background-position: center;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div>
+						<div class="owl-item" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation animated appear-animation-visible" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/FIL1268.png); background-size: cover; background-position: center;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div>
+						<div class="owl-item" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation animated appear-animation-visible" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/IMG_3558.png); background-size: cover; background-position: center;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div>
+						<div class="owl-item" style="width: 3459.6px;"><div class="position-relative overlay overlay-show overlay-op-9 overflow-hidden pt-4" data-dynamic-height="['845px','845px','845px','750px','750px']" style="height: 869px;">
+							<div class="background-image-wrapper position-absolute top-0 left-0 right-0 bottom-0 appear-animation animated appear-animation-visible" data-appear-animation="kenBurnsToLeft" data-appear-animation-duration="30s" data-plugin-options="{'minWindowWidth': 0}" data-carousel-onchange-show="" style="background-image: url(pic/IMG_3407.JPG); background-size: cover; background-position: center;"></div>
+							<div class="container position-relative z-index-3 pb-5 h-100">
+								<div class="row align-items-center pb-5 h-100">
+									<div class="col-lg-8 pb-5 mb-5">
+										<div class="HeaderTitle"><h1 class="text-color-light font-weight-bold line-height-1 text-12 text-md-14  mb-3 appear-animation animated blurIn appear-animation-visible">GEOHAZARDS</h1></div>
+										<h4 class="text-color-light font-weight-semibold line-height-3  mb-2 appear-animation animated blurIn appear-animation-visible" style="margin-top: 10px;">﴾وَجَعَلْنَا فِي الْأَرْضِ رَوَاسِيَ أَن تَمِيدَ بِهِمْ وَجَعَلْنَا فِيهَا فِجَاجًا سُبُلًا لَّعَلَّهُمْ يَهْتَدُون﴿</h4>
+									</div>
+								</div>
+							</div>
+						</div></div>
+					</div></div><div class="owl-nav" style="top: calc(50% - 70px);"><button type="button" role="presentation" class="owl-prev"></button><button type="button" role="presentation" class="owl-next"></button></div><div class="owl-dots disabled" style="transform: translate3d(0px, -235px, 0px);"><button role="button" class="owl-dot"><span></span></button><button role="button" class="owl-dot active"><span></span></button></div></div>
 				</div>
 
 				<div class="owl-carousel-wrapper position-relative z-index-1 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="2000" style="margin-top: -222px; height: 470px;" id="Hazard">
@@ -214,12 +246,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/Group 17.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-2 mb-4 pb-3'}" />
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Earthquakes</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Based on the Honorable Council of Ministers Resolution No. 115 dated 7/16/1420 AH, the Saudi Geological Survey Authority was established, and Clause (h) of Article Three regarding the regulations stipulates</p>
-										<a href="earthquacksDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/earthquake-and-home-svgrepo-com (2).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Earthquakes</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Based on the Honorable Council of Ministers Resolution No. 115 dated 7/16/1420 AH, the Saudi Geological Survey Authority was established, and Clause (h) of Article Three regarding the regulations stipulates</p>
+										<a href="earthquacksDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -231,12 +263,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/falling-debris-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-stroke-color-primary mt-2 mb-4 pb-3'}" />
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Landslides</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Land slides are considered a sudden geological hazard, and the risk of movements of ground materials depends on the slope of the slopes, the degree of water saturation, and the geological properties.</p>
-										<a href="landSlides.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/falling-debris-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Landslides</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Land slides are considered a sudden geological hazard, and the risk of movements of ground materials depends on the slope of the slopes, the degree of water saturation, and the geological properties.</p>
+										<a href="landSlides.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -248,12 +280,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/cliff-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-stroke-color-primary mt-2 mb-4 pb-3'}" />
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Subsidences</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Subsidences hazards occur where soluble rocks, carbonate deposits (limestone), and evaporite deposits (gypsum and anhydrite) are present, where...</p>
-										<a href="subsidencedetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/cliff-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Subsidences</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Subsidences hazards occur where soluble rocks, carbonate deposits (limestone), and evaporite deposits (gypsum and anhydrite) are present, where...</p>
+										<a href="subsidencedetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -265,12 +297,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/volcano-svgrepo-com (4).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-2 mb-4 pb-3'}" />
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Volcanoes</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Volcanic activities occurred in the Cenozoic era, where there are two common types of volcanic activities that represent 80% of volcano formation processes, which are shield volcanoes and cones.</p>
-										<a href="volcanoesDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/volcano-svgrepo-com (4).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Volcanoes</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Volcanic activities occurred in the Cenozoic era, where there are two common types of volcanic activities that represent 80% of volcano formation processes, which are shield volcanoes and cones.</p>
+										<a href="volcanoesDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -282,12 +314,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/marsh-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-stroke-color-primary custom-stroke-width-1 mt-2 mb-4 pb-3'}" />
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Sabakka</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Sabakka are considered one of the geomorphological hazards that affect humans and their economic activities, as marshes represent one of the main sources of salt weathering activity, which</p>
-										<a href="sabakkahDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/marsh-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter custom-stroke-width-1 mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Sabakka</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Sabakka are considered one of the geomorphological hazards that affect humans and their economic activities, as marshes represent one of the main sources of salt weathering activity, which</p>
+										<a href="sabakkahDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -299,12 +331,12 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/rain-svgrepo-com (1).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-2 mb-4 pb-3'}" style="filter: invert(12%) sepia(60%) saturate(2727%) hue-rotate(212deg) brightness(78%) contrast(101%);"/>
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">Floods</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">Rain falls in heavy quantities and for a very short period, causing torrential, fast-flowing floods that result in huge human and material losses. The causes of flood risks are due to a number of...</p>
-										<a href="floodsDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/rain-svgrepo-com (1).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">Floods</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">Rain falls in heavy quantities and for a very short period, causing torrential, fast-flowing floods that result in huge human and material losses. The causes of flood risks are due to a number of...</p>
+										<a href="floodsDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -316,12 +348,29 @@
 							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
 								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
 									<div class="card-body text-center px-4 py-5">
-										<img width="60" height="60" src="pic/desert-svgrepo-com (1).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-fill-color-primary mt-2 mb-4 pb-3'}" style="filter: invert(12%) sepia(60%) saturate(2727%) hue-rotate(212deg) brightness(78%) contrast(101%);"/>
-										<h2 class="card-title alternative-font-4 text-color-dark font-weight-semibold line-height-1 text-5 mb-3">ٍSandDunes</h2>
-										<p class="font-weight-light text-color-dark line-height-7 mb-2 boxes-text">It is one of the most important dangers affecting many regions of the Kingdom, which represents a real danger to roads and residential areas. The most important areas affected are the eastern region and the...</p>
-										<a href="sandDunsDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-fill-color-primary">
+										<img width="60" height="60" src="pic/desert-svgrepo-com (1).svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">ٍSandDunes</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">It is one of the most important dangers affecting many regions of the Kingdom, which represents a real danger to roads and residential areas. The most important areas affected are the eastern region and the...</p>
+										<a href="sandDunsDetails.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
 											READ MORE
-											<svg class="ms-2" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="py-5">
+							<a href="demo-law-firm-2-practice-areas-detail.html" class="text-decoration-none">
+								<div class="card custom-card-style-1 border-0 border-radius-0 custom-box-shadow-1">
+									<div class="card-body text-center px-4 py-5">
+										<img width="60" height="60" src="pic/valley-svgrepo-com.svg" alt="" data-icon data-plugin-options="{'onlySVG': true, 'extraClass': 'svg-filter mt-2 mb-4 pb-3'}" />
+										<h2 class="card-title-edited font-weight-semibold line-height-1 text-5 mb-3">ٍSandDunes</h2>
+										<p class="font-weight-light line-height-7 mb-2 boxes-text">It is one of the most important dangers affecting many regions of the Kingdom, which represents a real danger to roads and residential areas. The most important areas affected are the eastern region and the...</p>
+										<a href="valley.html" class="custom-read-more d-inline-flex justify-content-center align-items-center text-3 font-weight-medium svg-filter">
+											READ MORE
+											<svg class="ms-2 svg-filter" version="1.1" viewBox="0 0 15.698 8.706" width="17" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 												<polygon stroke="#777" stroke-width="0.1" fill="#777" points="11.354,0 10.646,0.706 13.786,3.853 0,3.853 0,4.853 13.786,4.853 10.646,8 11.354,8.706 15.698,4.353 "/>
 											</svg>
 										</a>
@@ -336,16 +385,16 @@
 				<div class="container py-5 mt-3">
 					<div class="row align-items-center justify-content-center">
 						<div class="col-lg-6 mb-5 mb-lg-0">
-							<h2 class="text-color-dark font-weight-extra-bold text-10 mb-4 appear-animation animated appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"><em>Geo-Hazards Database (Rawasi)</em></h2>
-							<p class="font-weight-light text-color-dark mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" style="animation-delay: 400ms;    padding-bottom: 20px;">A reliable platform for national geological hazards in the Kingdom of Saudi Arabia that displays data of earthquakes with the information of their depth, time of occurrence and location. It also allows presenting reports on other geological hazards along with their data. and It provides a service for reporting an earthquake.</p>
-							<a href="https://apps.sgs.gov.sa/AppEngine/?appId=1e6e0e78-56b6-4e33-b2c7-ee50afe5efb8&tenant=ngd" class="rawasi-btn" target="_blank">Geo-Hazards Database</a>
+							<h2 class="rawasi-title font-weight-extra-bold text-10 mb-4 appear-animation animated appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="200"><em>Geo-Hazards Database (Rawasi)</em></h2>
+							<p class="rawas-body mb-4 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="400" style="animation-delay: 400ms;    padding-bottom: 20px;">A reliable platform for national geological hazards in the Kingdom of Saudi Arabia that displays data of earthquakes with the information of their depth, time of occurrence and location. It also allows presenting reports on other geological hazards along with their data. and It provides a service for reporting an earthquake.</p>
+							<a href="https://apps.sgs.gov.sa/AppEngine/?appId=1e6e0e78-56b6-4e33-b2c7-ee50afe5efb8&tenant=ngd" class="mb-1 mt-1 me-1 btn rawasi-btn" target="_blank">Geo-Hazards Database</a>
 							<!-- <p class="positive-ls-3 text-color-grey mb-3 appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="600" style="animation-delay: 600ms;">JOHN DOE - CEO &amp; FOUNDER</p>
 							<img src="img/demos/law-firm-2/signature.png" class="img-fluid appear-animation animated fadeInUpShorter appear-animation-visible" data-appear-animation="fadeInUpShorter" data-appear-animation-delay="700" alt="" style="animation-delay: 700ms;"> -->
 						</div>
 						<div class="col-md-9 col-lg-6 ps-lg-5">
 							<div class="position-relative">
 								<div class="custom-shape-1 appear-animation animated appear-animation-visible" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="1100">
-									<div class="position-absolute top-0 left-0 right-0 bottom-0 bg-primary" data-plugin-float-element="" data-plugin-options="{'startPos': 'top', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="top: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, 5.83534%, 0px);"></div>
+									<div class="position-absolute top-0 left-0 right-0 bottom-0 bg-edited" data-plugin-float-element="" data-plugin-options="{'startPos': 'top', 'speed': 0.1, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="top: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, 5.83534%, 0px);"></div>
 								</div>
 								<div data-plugin-float-element="" data-plugin-options="{'startPos': 'top', 'speed': 0.3, 'transition': true, 'transitionDuration': 1000, 'isInsideSVG': true}" style="top: 0px; transition: transform 1000ms ease-out 0ms; transform: translate3d(0px, 1.57444%, 0px);">
 									<img src="pic/rawasi.png" class="img-fluid position-relative z-index-1 appear-animation animated appear-animation-visible" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="900" alt="">
@@ -418,15 +467,11 @@
 								
 							</div>
 							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
+								<ul class="social-icons social-icons-big social-icons-dark-2">
+									<li class="social-icons-youtube"><a href="https://www.youtube.com/SgsOrgSa" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-icons-twitter"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
 							</div>
 							<div class="col-4" style="text-align: right;">
 								<i class="fa-solid fa-phone" style="font-size: 20px;padding: 0 5px"></i>

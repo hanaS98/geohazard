@@ -50,11 +50,11 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -62,8 +62,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -79,7 +80,7 @@
 													</li>
 							
 													<li class="dropdown">
-														<a href="hazard.html" class="dropdown-item dropdown-toggle">Hazards</a>
+														<a href="hazard.html#Hazard" class="dropdown-item dropdown-toggle">Geohazards</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetails.html" class="nav-link">Earthquakes</a>
@@ -91,44 +92,66 @@
 																<a href="subsidencedetails.html" class="nav-link">Subsidences & ground cracks</a>
 															</li>
 															<li>
-																<a href="volcanoesDetails.html" class="nav-link">Volcanoes</a>
+																<a href="volcanoesDetails.html" class="nav-link">Volcanos</a>
 															</li>
 															<li>
-																<a href="sabakkahDetails.html" class="nav-link">Sabaka</a>
+																<a href="sabakkahDetails.html" class="nav-link">Sabkhahs</a>
 															</li>
 															<li>
 																<a href="floodsDetails.html" class="nav-link">Floods</a>
 															</li>
 															<li>
-																<a href="sandDunsDetails.html" class="nav-link">SandDunes</a>
+																<a href="sandDunsDetails.html" class="nav-link">Sand Duns</a>
+															</li>
+															<li>
+																<a href="valley.html" class="nav-link">Valleys</a>
 															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle active">Awareness</a>
+														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle">Media Center</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li>
+																<a href="volcanoesawareness.html" class="nav-link">Awareness</a>
+															</li>
+															<li>
+																<a href="gallery.html" class="nav-link">Gallary</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
+															</li>
+															
+															
+														</ul>
 														
 													</li>
+													
 													<li>
-														<a href="gallery.html" class="nav-link">Gallery</a>
+														<a href="form.html" class="nav-link">Report Geohazard</a>
 													</li>
 													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
+														<a href="volcanoesawarenessar.html" class="nav-link" style="font-family: 'Tajawal', sans-serif;">ع</a>
 													</li>
-													<li>
-														<a href="form.html" class="nav-link">Report a Geoazard</a>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="accessibility settings">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">Dark mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">Gray mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">Remove accessibility settings </a></li>
+														</ul>
+														
 													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="volcanoesawarenessar.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">ع</button>
-										</a>
-										
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -155,42 +178,68 @@
 
 				<div class="spacer my-4"></div>
 				<div class="container">
-					<!-- <div class="row pb-2">
-						<div class="col-lg-12 mb-5 mb-lg-0 appear-animation" data-appear-animation="fadeInUpShorterPlus" data-appear-animation-delay="200">
-							<h2 class="text-color-dark font-weight-bold text-10 pb-2 mb-4">Earthquakes & Volcanoes Awareness</h2>
-						</div>
-						
-						</div> -->
-						
+	
+					<div class="row pb-4 py-4">
 						<div class="row pb-4">
-							<h4>video</h4>
-								<div class="row">
-									<div class="col-lg-4" style="padding-bottom:10px;">
-										
-										<video width="100%" height="100%" controls="" muted="" loop="" preload="metadata">
-											<source src="video/DJI_0378_2.mp4" type="video/webm">
-											<source src="video/DJI_0378_2.mp4" type="video/mp4">
-									  </video>
-									</div>
-									<div class="col-lg-4" style="padding-bottom:10px;">
-										
-										<video width="100%" height="100%" controls="" muted="" loop="" preload="metadata">
-											<source src="video/DJI_0378_2.mp4" type="video/webm">
-											<source src="video/DJI_0378_2.mp4" type="video/mp4">
-									  </video>
-									</div>
-									<div class="col-lg-4" style="padding-bottom:10px;">
-										
-										<video width="100%" height="100%" controls="" muted="" loop="" preload="metadata">
-											<source src="video/DJI_0378_2.mp4" type="video/webm">
-											<source src="video/DJI_0378_2.mp4" type="video/mp4">
-									  </video>
+							
+							<div class="row">
+								<div class="col-lg-6">
+				
+									<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-left">
+										<div class="wpb_wrapper">
+											<div class="wpb_video_wrapper">
+												<iframe width="100%" height="300px" src="https://www.youtube.com/embed/p57NHa-ld5U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+											</div>
+										</div>
 									</div>
 								</div>
+								<div class="col-lg-6">
+				
+									<div class="wpb_video_widget wpb_content_element vc_clearfix   vc_video-aspect-ratio-169 vc_video-el-width-100 vc_video-align-left">
+										<div class="wpb_wrapper">
+											<div class="wpb_video_wrapper"><iframe width="100%" height="300px" src="https://www.youtube.com/embed/Dtqbiltc3zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="row py-4">
+								
+								<div class="row">
+				
+									<div class="col-lg-3" style="padding-bottom: 10px;">
+				
+										<a class="lightbox" href="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid" src="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg">
+										</a>
+									</div>
+				
+									<div class="col-lg-3" style="padding-bottom: 10px;">
+				
+										<a class="lightbox" href="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid" src="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg">
+										</a>
+									</div>
+									<div class="col-lg-3" style="padding-bottom: 10px;">
+										<a class="lightbox" href="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid" src="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg">
+										</a>
+				
+									</div>
+									<div class="col-lg-3" style="padding-bottom: 10px;">
+										<a class="lightbox" href="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg" data-plugin-options="{'type':'image'}">
+											<img class="img-fluid" src="pic/كيفية التصرف قبل وأثناء الزلازل؟_page-0002.jpg">
+										</a>
+				
+									</div>
+								</div>
+							</div>
+				
 						</div>
-						
-						
-						</div>
+				
+					</div>
+				
+				</div>
 			</div>
 
 						
@@ -209,15 +258,11 @@
 								
 							</div>
 							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
+								<ul class="social-icons social-icons-big social-icons-dark-2">
+									<li class="social-icons-youtube"><a href="https://www.youtube.com/SgsOrgSa" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-icons-twitter"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
 							</div>
 							<div class="col-4" style="text-align: right;">
 								<i class="fa-solid fa-phone" style="font-size: 20px;padding: 0 5px"></i>

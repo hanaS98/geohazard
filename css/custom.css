@@ -1,4 +1,8 @@
 
+[lang*=ar] body{
+    font-family: 'Tajawal', sans-serif;
+}
+
 .HeaderTitle h1{
     position: relative;
 }
@@ -7,11 +11,24 @@
     content: "";
     height: 100%;
     width: 5px;
-    background-color: #a98735;
+    background-color: #ae863c;
     left: -15px;
+    border-radius: 0px 10px 10px 0px;
+}
+[lang*=ar] .HeaderTitle h1::before{
+    right: -15px;
+}
+.article img{
+    max-width: 400px;
+    width: 100%;
 }
 .overlay.overlay-op-9:hover:before, .overlay.overlay-op-9.overlay-show:before, .overlay.overlay-op-9.show:before{
     opacity: 0.7;
+}
+.boxes-text{
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .small-img{
     display: none;
@@ -75,32 +92,190 @@
 .img-thumbnail.img-thumbnail-hover-icon:hover .photo-information .text{
     display: block;
 }
-a:hover i{
-    color: none;
+.custom-card-style-1{
+    height: 375px;
 }
-.fa-youtube:hover{
-    color: #CD201F;
+#header .header-btn-collapse-nav,
+#header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a.active{
+    background: #091f5a;
 }
-.fa-linkedin-in:hover{
-    color: #0077b5 ;
+#header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a.active:hover{
+    background-color: #1a316f;
 }
-.fa-twitter:hover{
-    color: #1DA1F2;
+#header .header-nav.header-nav-links nav > ul:hover > li > a.active,
+#header .header-nav.header-nav-links nav > ul > li > a:hover,
+#header .header-nav.header-nav-links nav > ul > li:hover > a{
+    color:#294591;
 }
-.boxes-text{
-    height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+#header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a,
+.nav-link,
+.nav-link:hover,
+#header .header-nav.header-nav-links nav > ul:not(:hover) > li > a.active{
+    color: #091f5a;
+}
+#header .header-nav-main nav > ul > li.dropdown .dropdown-menu{
+    border-top-color:#091f5a;
+}
+
+.change-lang{
+    background: #091f5a;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+}
+.acc-btn{
+    cursor: pointer;
+}
+.dark-logo{
+    display: none;
+}
+
+.custom-card-style-1 .card-title-edited,
+.boxes-text,
+.rawas-body,
+.rawasi-title{
+    color:#212529;
+}
+.rawas-body{
+    font-size: 15px;
 }
 .rawasi-btn{
     background-color: #091f5a;
     color: white;
-    font-size: 16px;
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 14px 25px;
+    transition: .3s;
+    font-size: 15px;
 }
-.rawasi-btn:hover{
-    background-color: #071640;
+.rawasi-btn:hover,.bg-edited{
+    background-color: #051339;
     color: white;
-    text-decoration: none;
 }
+.custom-card-style-1 .card-title-edited{
+    transition: ease color 300ms;
+}
+.custom-card-style-1:hover .card-title-edited{
+    color: #091f5a;
+}
+.svg-filter{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(5450%) hue-rotate(190deg) brightness(92%) contrast(114%);
+}
+section.section.section-overlay-opacity.section-overlay-opacity-scale-8:before{
+    background-color:#212529;
+    opacity:0.7;
+}
+.img-desc{
+    font-weight: bold;
+    color: black;
+}
+body.grayscale{
+    filter: grayscale(1);
+}
+/* Dark Mode Setting */
+body.darkmode #header .header-body,
+body.darkmode #header .header-nav-main:before,
+body.darkmode .custom-card-style-1,
+body.darkmode .form-box{
+    background: #1c2023;
+}
+html.sticky-header-active body.darkmode #header .header-body{
+    border-bottom-color: rgb(50 50 50 / 50%);
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+}
+
+body.darkmode #header .header-btn-collapse-nav,
+body.darkmode #header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a.active{
+    background: #fff;
+}
+body.darkmode #header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a.active:hover{
+    background-color: #fff;
+}
+body.darkmode #header .header-nav.header-nav-links nav > ul:hover > li > a.active,
+body.darkmode #header .header-nav.header-nav-links nav > ul > li > a:hover,
+body.darkmode #header .header-nav.header-nav-links nav > ul > li:hover > a,
+body.darkmode #header .header-nav-main:not(.header-nav-main-mobile-dark) nav > ul > li > a,
+body.darkmode .nav-link,
+body.darkmode .nav-link:hover,
+body.darkmode #header .header-nav.header-nav-links nav > ul:not(:hover) > li > a.active,
+body.darkmode .rawasi-title,
+body.darkmode h4,
+body.darkmode h5{
+    color:#f2f2f2;
+}
+
+
+body.darkmode #header .header-nav-main nav > ul > li.dropdown .dropdown-menu{
+    border-top-color:#fff;
+}
+body.darkmode .img-filter{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%) hue-rotate(222deg) brightness(103%) contrast(101%);
+}
+body.darkmode .img-filter-dark{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(9%) saturate(5450%) hue-rotate(190deg) brightness(92%) contrast(114%);
+}
+body.darkmode .overlay.overlay-op-9:hover:before,
+body.darkmode .overlay.overlay-op-9.overlay-show:before, .overlay.overlay-op-9.show:before{
+    opacity: 0.9;
+}
+body.darkmode .dark-logo{
+    display: block;
+}
+@media(max-width:520px){
+    body.darkmode .dark-logo{
+        display: none;
+    }
+}
+body.darkmode .light-logo{
+    display: none;
+}
+body.darkmode .custom-card-style-1 .card-title-edited{
+    color: #f2f2f2;
+    transition: ease color 300ms;
+}
+body.darkmode .custom-card-style-1:hover .card-title-edited{
+    color: #569cd6;
+}
+body.darkmode .boxes-text,
+body.darkmode .rawas-body,
+body.darkmode p,
+body.darkmode .form-box label{
+    color: #e6e6e6;
+}
+body.darkmode .body{
+    background-color: #191919;
+}
+body.darkmode .svg-filter{
+    filter: brightness(0) saturate(100%) invert(53%) sepia(70%) saturate(348%) hue-rotate(165deg) brightness(94%) contrast(93%);
+}
+body.darkmode .rawasi-btn,
+body.darkmode .location-btn{
+    background-color: #569cd6;
+    color: white;
+}
+body.darkmode .rawasi-btn:hover,
+body.darkmode .location-btn{
+    background-color: #4380b1;
+}
+body.darkmode .bg-edited{
+    background-color: #569cd6;
+}
+body.darkmode section.section.section-overlay-opacity.section-overlay-opacity-scale-8:before{
+    background-color:#212529;
+    opacity:0.9;
+}
+body.darkmode .sticky-header-active #header .header-body{
+    border-bottom-color: #1c2023;
+    box-shadow: 0 0 3px rgb(0 0 0 / 50%);
+}
+body.darkmode .form-box{
+    box-shadow: 0 0 3px 0 black;
+}
+
+body.darkmode .form-box input[type='text'],
+body.darkmode .form-box textarea,
+body.darkmode .form-box .form-select{
+    background-color: #101010;
+    color: #f2f2f2;
+}   

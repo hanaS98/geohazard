@@ -50,11 +50,11 @@
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -62,8 +62,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -79,7 +80,7 @@
 													</li>
 							
 													<li class="dropdown">
-														<a href="hazard.html" class="dropdown-item dropdown-toggle active">Hazards</a>
+														<a href="hazard.html#Hazard" class="dropdown-item dropdown-toggle">Geohazards</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetails.html" class="nav-link">Earthquakes</a>
@@ -91,44 +92,66 @@
 																<a href="subsidencedetails.html" class="nav-link">Subsidences & ground cracks</a>
 															</li>
 															<li>
-																<a href="volcanoesDetails.html" class="nav-link">Volcanoes</a>
+																<a href="volcanoesDetails.html" class="nav-link">Volcanos</a>
 															</li>
 															<li>
-																<a href="sabakkahDetails.html" class="nav-link">Sabaka</a>
+																<a href="sabakkahDetails.html" class="nav-link">Sabkhahs</a>
 															</li>
 															<li>
 																<a href="floodsDetails.html" class="nav-link">Floods</a>
 															</li>
 															<li>
-																<a href="sandDunsDetails.html" class="nav-link">SandDunes</a>
+																<a href="sandDunsDetails.html" class="nav-link">Sand Duns</a>
+															</li>
+															<li>
+																<a href="valley.html" class="nav-link">Valleys</a>
 															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle">Awareness</a>
+														<a href="volcanoesawareness.html" class="dropdown-item dropdown-toggle">Media Center</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li>
+																<a href="volcanoesawareness.html" class="nav-link">Awareness</a>
+															</li>
+															<li>
+																<a href="gallery.html" class="nav-link">Gallary</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
+															</li>
+															
+															
+														</ul>
 														
 													</li>
+													
 													<li>
-														<a href="gallery.html" class="nav-link">Gallery</a>
+														<a href="form.html" class="nav-link">Report Geohazard</a>
 													</li>
 													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">Technical Reports</a>
+														<a href="landSlidesar.html" class="nav-link" style="font-family: 'Tajawal', sans-serif;">ع</a>
 													</li>
-													<li>
-														<a href="form.html" class="nav-link">Report a Geoazard</a>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="accessibility settings">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">Dark mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">Gray mode</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">Remove accessibility settings </a></li>
+														</ul>
+														
 													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="landSlidesar.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">ع</button>
-										</a>
-										
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -203,13 +226,13 @@ which is next:
 							</p>
 							
 							<ol>
-								<li>The presence of weak zones and faults.</li>
-								<li>Joints in rocks, especially if their angles of inclination are high and towards the road or important areas.</li>
-								<li>Urban expansion and the subsequent change in the levels of some areas, in addition to the construction of longitudinal and transverse roads, which led to a change in the mountainous features.</li>
-								<li>Rain and water and their effect on penetration into rocks and sediments, which leads to weakening the strength of rocks and sediments.</li>
-								<li>The nature of rocks and the weathering processes that lead to the weakening of rocks.</li>
-								<li>Water seepage from human activities in mountainous areas.</li>
-								<li>Lack of good drainage of rainwater from mountainous areas.</li>
+								<li><p style="padding: 0; margin: 0;">The presence of weak zones and faults.</p></li>
+								<li><p style="padding: 0; margin: 0;">Joints in rocks, especially if their angles of inclination are high and towards the road or important areas.</p></li>
+								<li><p style="padding: 0; margin: 0;">Urban expansion and the subsequent change in the levels of some areas, in addition to the construction of longitudinal and transverse roads, which led to a change in the mountainous features.</p></li>
+								<li><p style="padding: 0; margin: 0;">Rain and water and their effect on penetration into rocks and sediments, which leads to weakening the strength of rocks and sediments.</p></li>
+								<li><p style="padding: 0; margin: 0;">The nature of rocks and the weathering processes that lead to the weakening of rocks.</p></li>
+								<li><p style="padding: 0; margin: 0;">Water seepage from human activities in mountainous areas.</p></li>
+								<li><p style="padding: 0; margin: 0;">Lack of good drainage of rainwater from mountainous areas.</p></li>
 							</ol>
 							<img src="pic/recovery/image.png">
 							<img src="pic/recovery/image (1).png">
@@ -219,17 +242,17 @@ which is next:
 								Landslides are considered a sudden geological hazard, and the risk of movements of ground materials depends on the slope of the slopes, the degree of water saturation, and the geological and engineering properties of the rocks and soil. Obstacles and roads that penetrate mountainous areas are considered the areas most vulnerable to mountain avalanches in the Kingdom. The types of mountain collapses are divided into several types:
 							</p>
 							<ul>
-								<li>Rapid fall of rocks from the top of high and steep slopes.</li>
-								<li>The sliding of rocks on geological structures, including faults, joints, and shear zones. This process occurs at different speeds, some at one level, some at two levels, some circular, and some overturning.</li>
-								<li>Flow of sedimentary fragments (soil and rocks), where sedimentary flows occur at different speeds in the presence of water.</li>
-								<li>Rock crawling occurs in specific types of rocks and in a very slow movement that cannot be followed with the naked eye.</li>
+								<li><p style="padding: 0; margin: 0;">Rapid fall of rocks from the top of high and steep slopes.</p></li>
+								<li><p style="padding: 0; margin: 0;">The sliding of rocks on geological structures, including faults, joints, and shear zones. This process occurs at different speeds, some at one level, some at two levels, some circular, and some overturning.</p></li>
+								<li><p style="padding: 0; margin: 0;">Flow of sedimentary fragments (soil and rocks), where sedimentary flows occur at different speeds in the presence of water.</p></li>
+								<li><p style="padding: 0; margin: 0;">Rock crawling occurs in specific types of rocks and in a very slow movement that cannot be followed with the naked eye.</p></li>
 							</ul>
 							<h4>Learning Objectives</h4>
 							<ul>
-								<li>Study the geological risks related to mountain slides and their impact on infrastructure</li>
-								<li>Community awareness and protection from the negative effects resulting from the dangers of mountain slides.</li>
-								<li>Identifying dangerous places that are at risk of mountain slides.</li>
-								<li>Study the geometric properties of mountain slopes and perform digital modeling for each slope, in order to develop the necessary solutions and recommendations to reduce and mitigate the risks of mountain slides.</li>
+								<li><p style="padding: 0; margin: 0;">Study the geological risks related to mountain slides and their impact on infrastructure</p></li>
+								<li><p style="padding: 0; margin: 0;">Community awareness and protection from the negative effects resulting from the dangers of mountain slides.</p></li>
+								<li><p style="padding: 0; margin: 0;">Identifying dangerous places that are at risk of mountain slides.</p></li>
+								<li><p style="padding: 0; margin: 0;">Study the geometric properties of mountain slopes and perform digital modeling for each slope, in order to develop the necessary solutions and recommendations to reduce and mitigate the risks of mountain slides.</p></li>
 							</ul>
 										</div>
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple2" role="tabpanel">
@@ -242,18 +265,19 @@ which is next:
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple3" role="tabpanel">
 											<h4>Educational Material</h4>
 											<ol>
-												<li>Conduct an extensive study of the climate of the region and analyze the topography and geology of the site through the use of various maps, contour maps, satellite images, and field visits.</li>
-												<li>Analyzing satellite images to identify changes in the region.</li>
-												<li>Carrying out field work to divide dangerous sites, in addition to dividing the road into a number of stations, specifying the coordinates using GPS.</li>
-												<li>Study each site on the mountain in detail, determine the sizes of the dangerous masses, determine the characteristics of each site and station, such as its height and length, make various measurements using a compass and a geological hammer, and apply the rockfall system known as the modified Colorado system.</li>
-												<li>Conduct a rockfall simulation to determine the maximum distance it reaches and determine the location of debris flow channels.</li>
+												<li><p style="padding: 0; margin: 0;">Conduct an extensive study of the climate of the region and analyze the topography and geology of the site through the use of various maps, contour maps, satellite images, and field visits.</p></li>
+												<li><p style="padding: 0; margin: 0;">Analyzing satellite images to identify changes in the region.</p></li>
+												<li><p style="padding: 0; margin: 0;">Carrying out field work to divide dangerous sites, in addition to dividing the road into a number of stations, specifying the coordinates using GPS.</p></li>
+												<li><p style="padding: 0; margin: 0;">Study each site on the mountain in detail, determine the sizes of the dangerous masses, determine the characteristics of each site and station, such as its height and length, make various measurements using a compass and a geological hammer, and apply the rockfall system known as the modified Colorado system.</p></li>
+												<li><p style="padding: 0; margin: 0;">Conduct a rockfall simulation to determine the maximum distance it reaches and determine the location of debris flow channels.</p></li>
 												<li>
-													Collect rock and soil samples for laboratory tests, including:
+													<p>Collect rock and soil samples for laboratory tests, including:</p>
+													
 
 													<ul>
-														<li>Conduct petrological studies through a microscope to determine the type of rocks.</li>
-														<li>Conduct a chemical analysis of some samples to determine the chemical composition and identify the rock components.</li>
-														<li>The work of determining natural and engineering properties (rock strength, angle of friction, and cohesion)</li>
+														<li><p style="padding: 0; margin: 0;">Conduct petrological studies through a microscope to determine the type of rocks.</p></li>
+														<li><p style="padding: 0; margin: 0;">Conduct a chemical analysis of some samples to determine the chemical composition and identify the rock components.</p></li>
+														<li><p style="padding: 0; margin: 0;">The work of determining natural and engineering properties (rock strength, angle of friction, and cohesion)</p></li>
 													</ul>
 												</li>
 											</ol>
@@ -315,15 +339,11 @@ which is next:
 								
 							</div>
 							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
+								<ul class="social-icons social-icons-big social-icons-dark-2">
+									<li class="social-icons-youtube"><a href="https://www.youtube.com/SgsOrgSa" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-icons-twitter"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
 							</div>
 							<div class="col-4" style="text-align: right;">
 								<i class="fa-solid fa-phone" style="font-size: 20px;padding: 0 5px"></i>

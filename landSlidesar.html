@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
 
 		<!-- Vendor CSS -->
-		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.rtl.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 		<link rel="stylesheet" href="vendor/animate/animate.compat.css">
 		<link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.min.css">
@@ -46,17 +46,17 @@
 		<link id="skinCSS" rel="stylesheet" href="css/skins/skin-law-firm-2.css">
 
 		<!-- Theme Custom CSS -->
-		<link rel="stylesheet" href="css/customar.css">
+		<link rel="stylesheet" href="css/custom.css">
 
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
 	</head>
-	<body>
+	<body onload="checkMode()">
 
 		<div class="body">
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}">
-				<div class="header-body header-body-bottom-border border-top-0">
+			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEffect': 'shrink', 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': false, 'stickyChangeLogo': true, 'stickyStartAt': 30, 'stickyHeaderContainerHeight': 70}" style="height: 70px;">
+				<div class="header-body  border-top-0">
 					
 					<div class="header-container container">
 						<div class="header-row">
@@ -64,8 +64,9 @@
 								<div class="header-row">
 									<div class="header-logo" style="width: auto;">
 										<a href="https://sgs.gov.sa/">
-											<img src="pic/sgslogov2.png" class="img-fluid main-img" width="280" height="49" alt="" />
-											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="" />
+											<img src="pic/sgslogov2.png" class="img-fluid main-img light-logo" width="280" height="49" alt="logo" />
+											<img src="pic/sgswhitelogo.png" class="img-fluid main-img dark-logo" width="280" height="49" alt="logo" />
+											<img src="pic/SGS-ICON.ico" class="img-fluid small-img" width="60" alt="logo" />
 										</a>
 									</div>
 								</div>
@@ -81,7 +82,7 @@
 													</li>
 							
 													<li class="dropdown">
-														<a href="hazardar.html" class="dropdown-item dropdown-toggle active">المخاطر</a>
+														<a href="hazardar.html#Hazard" class="dropdown-item dropdown-toggle">المخاطر الجيولوجية</a>
 														<ul class="dropdown-menu border-radius-0">
 															<li>
 																<a href="earthquacksDetailsar.html" class="nav-link">الزلازل</a>
@@ -104,32 +105,55 @@
 															<li>
 																<a href="sandDunsDetailsar.html" class="nav-link">الزحف الرملي والكثبان</a>
 															</li>
+															<li>
+																<a href="valleyar.html" class="nav-link">الأودية</a>
+															</li>
 														</ul>
 													</li>
 													<li class="dropdown">
-														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">التوعية</a>
+														<a href="volcanoesawarenessar.html" class="dropdown-item dropdown-toggle">المركز الإعلامي</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li>
+																<a href="volcanoesawarenessar.html" class="nav-link">التوعية والتثقيف</a>
+															</li>
+															<li>
+																<a href="galleryar.html" class="nav-link">معرض الصور</a>
+															</li>
+															<li>
+																<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
+															</li>
+															
+															
+														</ul>
+														
 													</li>
-													<li>
-														<a href="galleryar.html" class="nav-link">معرض الصور</a>
-													</li>
-													<li>
-														<a href="https://ngdp.sgs.gov.sa/biblioapp/" target="_blank" class="nav-link">التقارير الفنية</a>
-													</li>
+													
 													<li>
 														<a href="formar.html" class="nav-link">الابلاغ عن خطر جيولوجي</a>
 													</li>
+													<li>
+														<a href="landSlides.html" class="nav-link">EN</a>
+													</li>
+													<li  class="dropdown">
+														<a href="#" class="dropdown-item dropdown-toggle" title="ادوات سهولة الوصول">
+															<img class="img-filter" src="pic/setting-2-svgrepo-com.svg" width="30px" >
+															
+														</a>
+														<ul class="dropdown-menu border-radius-0">
+															<li><a class="nav-link acc-btn" onclick="turndark()">الوضع المظلم</a></li>
+															<li><a class="nav-link acc-btn" onclick="turngray()">الوضع الرمادي</a></li>
+															<li><a class="nav-link acc-btn" onclick="removeAccess()">إزالة إعدادات سهولة الوصول</a></li>
+														</ul>
+														
+													</li>
+													
 												</ul>
 											</nav>
 										</div>
 									</div>
-									<div class="header-nav-features header-nav-features-no-border">
-										<a href="landSlides.html" >
-											<button style="background: #091f5a;color: white;width: 40px;height: 40px;border: none;border-radius: 100%;">EN</button>
-										</a>
-										
-									</div>
+									
 									<button class="btn header-btn-collapse-nav" data-bs-toggle="collapse" data-bs-target=".header-nav-main nav">
-										<i class="fas fa-bars"></i>
+										<i class="fas fa-bars img-filter-dark"></i>
 									</button>
 								</div>
 							</div>
@@ -194,13 +218,13 @@
 								وهي كالتالي:</p>
 						
 							<ol>
-								<li>وجود نطاقات الضعف والصدوع. </li>
-								<li>الفواصل بالصخور وخصوصاً إذا كانت ا زوايا ميلها عالية وباتجاه الطريق او المناطق الهامة. </li>
-								<li>الامتداد العمراني وما تبعه من تغيير في مناسيب بعض المناطق، بالإضافة إلى شق الطرق الطولية والعرضية مما أدى إلى تغيير في المعالم الجبلية.</li>
-								<li> الأمطار والمياه وتأثيرها على التغلغل داخل الصخور والرواسب التي تؤدي إلى إضعاف قوة الصخور والرواسب. </li>
-								<li>طبيعة الصخور وعمليات التجوية التي تؤدي الى اضعاف الصخور. </li>
-								<li> تسرب المياه من الانشطة البشرية أعلى المناطق الجبلية. </li>
-								<li>عدم التصريف الجيد لمياه الامطار من المناطق الجبلية.</li>
+								<li><p style="margin: 0; padding: 0;">وجود نطاقات الضعف والصدوع. </p></li>
+								<li><p style="margin: 0; padding: 0;">الفواصل بالصخور وخصوصاً إذا كانت ا زوايا ميلها عالية وباتجاه الطريق او المناطق الهامة. </p></li>
+								<li><p style="margin: 0; padding: 0;">الامتداد العمراني وما تبعه من تغيير في مناسيب بعض المناطق، بالإضافة إلى شق الطرق الطولية والعرضية مما أدى إلى تغيير في المعالم الجبلية.</p></li>
+								<li><p style="margin: 0; padding: 0;">الأمطار والمياه وتأثيرها على التغلغل داخل الصخور والرواسب التي تؤدي إلى إضعاف قوة الصخور والرواسب. </p> </li>
+								<li><p style="margin: 0; padding: 0;">طبيعة الصخور وعمليات التجوية التي تؤدي الى اضعاف الصخور. </p></li>
+								<li><p style="margin: 0; padding: 0;">تسرب المياه من الانشطة البشرية أعلى المناطق الجبلية. </p> </li>
+								<li><p style="margin: 0; padding: 0;">عدم التصريف الجيد لمياه الامطار من المناطق الجبلية.</p></li>
 							</ol>
 							<img src="pic/recovery/image.png">
 							<img src="pic/recovery/image (1).png">
@@ -210,17 +234,17 @@
 								تُعد الانزلاقات الجبلية من المخاطر الجيولوجية المفاجئة، وتتوقف خطورة تحركات المواد الأرضية على ميل المنحدرات ودرجة التشبع بالماء والى الخواص الجيولوجية والهندسية للصخور والتربة. وتعتبر العقبات والطرق التي تخترق المناطق الجبلية أكثر المناطق تعرضا للانهيارات الجبلية في المملكة. وتنقسم أنواع الانهيارات الجبلية الى عدة أنواع وهي:
 							</p>
 							<ul>
-								<li>التساقط السريع للصخور من أعلى المنحدرات المرتفعة والشديدة الإنحدار.</li>
-								<li>إنزلاق الصخور على التراكيب الجيولوجية، من فوالق وفواصل ونطاقات قص، وتتم هذه العملية بسرعات مختلفة منها مايكون على مستوى واحد ومنها مايكون على مستويين ومنها الدائري ومنها الإنقلابي.</li>
-								<li>إنسيال الفتات الرسوبي (تربة وصخور)، حيث تتم الإنسيابات الرسوبية بسرعات مختلفة مع وجود الماء.</li>
-								<li> زحف الصخور ويتم في أنواع محددة من الصخور وبحركة بطيئة جداً لايمكن متابعتها بالعين المجردة.</li>
+								<li><p style="margin: 0; padding: 0;">التساقط السريع للصخور من أعلى المنحدرات المرتفعة والشديدة الإنحدار.</p></li>
+								<li><p style="margin: 0; padding: 0;">إنزلاق الصخور على التراكيب الجيولوجية، من فوالق وفواصل ونطاقات قص، وتتم هذه العملية بسرعات مختلفة منها مايكون على مستوى واحد ومنها مايكون على مستويين ومنها الدائري ومنها الإنقلابي.</p></li>
+								<li><p style="margin: 0; padding: 0;">إنسيال الفتات الرسوبي (تربة وصخور)، حيث تتم الإنسيابات الرسوبية بسرعات مختلفة مع وجود الماء.</p></li>
+								<li><p style="margin: 0; padding: 0;">زحف الصخور ويتم في أنواع محددة من الصخور وبحركة بطيئة جداً لايمكن متابعتها بالعين المجردة.</p> </li>
 							</ul>
 							<h4>الأهداف من دراستها :</h4>
 							<ul>
-								<li>دراسة المخاطر الجيولوجية المتعلقة بالإنزلاقات الجبلية وتأثيرها على البنية التحتية</li>
-								<li>توعية المجتمع، والحماية من الآثار السلبية الناتجة عن مخاطر الإنزلاقات الجبلية.</li>
-								<li>تحديد الأماكن الخطرة والمعرضة لخطر الإنزلاقات الجبلية.</li>
-								<li>دراسة الخواص الهندسية للمنحدرات الجبلية وعمل النمذجة الرقمية لكل منحدر، وذلك لوضع الحلول والتوصيات اللازمة للحد والتخفيف من مخاطر الإنزلاقات الجبلية.</li>
+								<li><p style="margin: 0; padding: 0;">دراسة المخاطر الجيولوجية المتعلقة بالإنزلاقات الجبلية وتأثيرها على البنية التحتية</p></li>
+								<li><p style="margin: 0; padding: 0;">توعية المجتمع، والحماية من الآثار السلبية الناتجة عن مخاطر الإنزلاقات الجبلية.</p></li>
+								<li><p style="margin: 0; padding: 0;">تحديد الأماكن الخطرة والمعرضة لخطر الإنزلاقات الجبلية.</p></li>
+								<li><p style="margin: 0; padding: 0;">دراسة الخواص الهندسية للمنحدرات الجبلية وعمل النمذجة الرقمية لكل منحدر، وذلك لوضع الحلول والتوصيات اللازمة للحد والتخفيف من مخاطر الإنزلاقات الجبلية.</p></li>
 							</ul>
 										</div>
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple2" role="tabpanel">
@@ -233,17 +257,18 @@
 										<div class="tab-pane tab-pane-navigation" id="tabsNavigationVertSimple3" role="tabpanel">
 											<h4>المنهجية المستخدمة في الدراسة</h4>
 											<ol>
-												<li>عمل د راسة مستفيضة لمناخ المنطقة وتحليل طبوغرافية وجيولوجية الموقع من خلال استخدام الخرائط المختلفة والخرائط الكنتورية والصور الفضائية والزيارات الحقلية.</li>
-												<li>تحليل الصور الفضائية للتعرف على التغيرات ت بالمنطقة.</li>
-												<li> القيام بالعمل الميدانية لعمل تقسيم للمواقع الخطرة بالإضافة الى تقسيم الطريق الى عدد من المحطات مع تحديد الاحداثيات باستخدامGPS. </li>
-												<li>دراسة كل موقع على الجبل تفصيلياً وتحديد احجام الكتل الخطرة تحديد خصائص كل موقع ومحطة مثل ارتفاعها وطولها وعمل القياسات المختلفة باستخدام البوصلة والشاكوش الجيولوجي وتطبيق نظام التساقطات الصخرية والمعروف باسم نظام كولورادوا المعدل </li>
-												<li>عمل محاكاة لتساقط الصخور لتحديد اقصى مسافة تصل اليها وتحديد موقع قنوات تدفق الحطام.</li>
+												<li><p style="margin: 0; padding: 0;">عمل د راسة مستفيضة لمناخ المنطقة وتحليل طبوغرافية وجيولوجية الموقع من خلال استخدام الخرائط المختلفة والخرائط الكنتورية والصور الفضائية والزيارات الحقلية.</p></li>
+												<li><p style="margin: 0; padding: 0;">تحليل الصور الفضائية للتعرف على التغيرات ت بالمنطقة.</p></li>
+												<li><p style="margin: 0; padding: 0;"> القيام بالعمل الميدانية لعمل تقسيم للمواقع الخطرة بالإضافة الى تقسيم الطريق الى عدد من المحطات مع تحديد الاحداثيات باستخدامGPS. </p></li>
+												<li><p style="margin: 0; padding: 0;">دراسة كل موقع على الجبل تفصيلياً وتحديد احجام الكتل الخطرة تحديد خصائص كل موقع ومحطة مثل ارتفاعها وطولها وعمل القياسات المختلفة باستخدام البوصلة والشاكوش الجيولوجي وتطبيق نظام التساقطات الصخرية والمعروف باسم نظام كولورادوا المعدل </p></li>
+												<li><p style="margin: 0; padding: 0;">عمل محاكاة لتساقط الصخور لتحديد اقصى مسافة تصل اليها وتحديد موقع قنوات تدفق الحطام.</p></li>
 												<li>
-													جمع عينات الصخور والتربة للاختبارات المعملية والمشتملة على: 
+													<p>جمع عينات الصخور والتربة للاختبارات المعملية والمشتملة على: </p>
+													
 													<ul>
-														<li>عمل دراسات بترولوجية من خلال الميكروسكوب لتحديد نوع الصخور. </li>
-														<li>عمل تحليل كيميائي لبعض العينات لتحديد التركيب الكيميائي للتعرف على مكونات الصخور.</li>
-														<li>عمل تحديد الخصائص الطبيعية والهندسية (قوة الصخور وزاوية الاحتكاك والتماسك)</li>
+														<li><p style="margin: 0; padding: 0;">عمل دراسات بترولوجية من خلال الميكروسكوب لتحديد نوع الصخور. </p></li>
+														<li><p style="margin: 0; padding: 0;">عمل تحليل كيميائي لبعض العينات لتحديد التركيب الكيميائي للتعرف على مكونات الصخور.</p></li>
+														<li><p style="margin: 0; padding: 0;">عمل تحديد الخصائص الطبيعية والهندسية (قوة الصخور وزاوية الاحتكاك والتماسك)</p></li>
 													</ul>
 												</li>
 											</ol>
@@ -276,15 +301,11 @@
 								
 							</div>
 							<div class="col-4" style="text-align: center;">
-								<a href="https://www.youtube.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-youtube" style="font-size: 22px;padding: 0 5px" title="youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/company/saudi-geological-survey/" target="_blank">
-									<i class="fa-brands fa-linkedin-in" style="font-size: 22px;padding: 0 5px" title="linkedin"></i>
-								</a>
-								<a href="https://twitter.com/SgsOrgSa" target="_blank">
-									<i class="fa-brands fa-twitter" style="font-size: 22px;padding: 0 5px" title="twitter"></i>
-								</a>
+								<ul class="social-icons social-icons-big social-icons-dark-2">
+									<li class="social-icons-youtube"><a href="https://www.youtube.com/SgsOrgSa" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+									<li class="social-icons-twitter"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+									<li class="social-icons-linkedin"><a href="https://twitter.com/SgsOrgSa" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+								</ul>
 							</div>
 							<div class="col-4" style="text-align: left;">
 								<i class="fa-solid fa-phone-flip" style="font-size: 20px;padding: 0 5px"></i>

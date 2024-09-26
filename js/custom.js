@@ -13,7 +13,36 @@ var long=0;
 const attachment = document.getElementById('attachment');
 const agreement = document.getElementById('tabContent9Checkbox');
 const submit = document.getElementById('submit');
+isLocalStorageAvailable = typeof localStorage !== 'undefined';
+ 
+function turngray(){
+  document.body.classList.remove('darkmode');
+  document.body.classList.add('grayscale');
+  localStorage.setItem('modeStorage','grayscale');
+}
+function turndark(){
+  document.body.classList.remove('grayscale');
+  document.body.classList.add('darkmode');
+  localStorage.setItem('modeStorage','darkmode');
+}
+function removeAccess(){
+  document.body.classList.remove('grayscale');
+  document.body.classList.remove('darkmode');
+  localStorage.setItem('modeStorage','default');
+}
 
+function checkMode(){
+  console.log(localStorage.getItem('modeStorage'));
+  if(localStorage.getItem('modeStorage') === 'default'){
+    document.body.classList.remove('grayscale');
+  }
+  if(localStorage.getItem('modeStorage') === 'grayscale'){
+    document.body.classList.add('grayscale');
+  }
+  if(localStorage.getItem('modeStorage') === 'darkmode'){
+    document.body.classList.add('darkmode');
+  }
+}
 currentLocation.onclick = function(){getLocation()}
 function getLocation() {
   if (navigator.geolocation) {
